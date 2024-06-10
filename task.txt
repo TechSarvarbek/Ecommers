@@ -1,0 +1,55 @@
+Register
+    - Username
+    - Password
+    - Email
+    # email verification
+Login
+    - Username & Passowrd login
+    - Or login with email verification
+Logout
+    - logout
+
+
+Profile view
+    - User data 
+    - User products (with category )
+    - My products CRUD
+
+Profile update
+    - Username & Passowrd & Email
+    - Description and bg image
+
+
+##################### Product
+
+Products
+    - views latest books
+    - release similar products
+
+Products search
+    - views latest search books
+    - big data search
+
+Product filter
+    - product type
+    - price
+
+
+Product add
+    - Images multiple
+    - Title
+    - Description
+    - deliver ( null )
+    - price
+
+
+##################### saved
+Saved product
+    - product
+
+
+
+##################### ad (Reklama)
+Ad
+    - Image ( null )
+    - text

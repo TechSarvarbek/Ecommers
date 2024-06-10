@@ -1,0 +1,40 @@
+# Compiled Python files
+*.pyc
+*.pyo
+__pycache__/
+
+# Distribution and packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.env/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.pydevproject
+*.pyc
+*.sage.py
+*.swp
+*~
+
+# Local development settings
+settings.ini
+
+# Miscellaneous
+*.log
+*.bak
+*.tmp
+*.db
+*.sqlite3
+*.csv
+*.json
+
+# Ignore specific files or directories
+my_secret_file.txt
+logs/
