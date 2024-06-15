@@ -1,3 +1,4 @@
+from django.contrib.auth.hashers import check_password
 from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
@@ -23,3 +24,19 @@ class ProfileUpdateView(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class ChangePasswordView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        old_password = request.data.get("old_password")
+        new_password = request.data.get("new_password")
+        user = request.user
+        print(old_password, new_password,' [-PASSWORD-] ', user.password)
+        if check_password(old_password, user.password):
+            user.password = new_password
+            user.save()
+            return Response({'message': 'Password changed successfully'}, status=200)
+        
+        return Response({'error':'Password incorrect'}, status=400)
