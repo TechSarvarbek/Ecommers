@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # global apps
     'rest_framework',
     'corsheaders',
+    'drf_yasg',
 
     # local apps
     'user',
