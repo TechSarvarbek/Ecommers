@@ -49,4 +49,4 @@ class ProductDetailApiView(APIView):
             serializer = ProductSerializer(product)
             return Response(serializer.data)
         except Product.DoesNotExist:
-            return Response(serializer.data, status=404)
+            return Response({'error':'Product not found.'}, status=404)

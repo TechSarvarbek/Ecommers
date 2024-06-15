@@ -7,7 +7,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
     first_name = models.CharField(max_length=20, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
-    image = models.ImageField(upload_to='images/')
+    image = models.ImageField(upload_to='images/', null=True, blank=True)
     
     verify = models.IntegerField(null=True, blank=True)
     is_staff = models.BooleanField(default=False)
